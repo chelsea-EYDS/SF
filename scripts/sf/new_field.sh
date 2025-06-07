@@ -1,0 +1,1 @@
+sf schema generate field --object force-app/main/default/objects/TestTwo__c --label $1

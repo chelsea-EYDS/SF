@@ -1,0 +1,1 @@
+ sf schema generate sobject --label $1

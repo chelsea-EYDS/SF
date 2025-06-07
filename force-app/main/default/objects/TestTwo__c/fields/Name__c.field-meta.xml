@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>Name__c</fullName>
+    <type>Text</type>
+    <length>255</length>
+    <inlineHelpText/>
+    <required>false</required>
+    <unique>true</unique>
+    <externalId>false</externalId>
+    <description>Name</description>
+    <label>Name</label>
+    <securityClassification>Public</securityClassification>
+</CustomField>
