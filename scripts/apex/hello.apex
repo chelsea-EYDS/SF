@@ -6,8 +6,9 @@
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
 // string tempvar = 'Enter_your_name_here';
-Opportunity opp = [SELECT ID, Amount from Opportunity where Id = '006gL000007AHyPQAW'];
-opp.Amount = opp.Amount + 1;
-update opp;
+// Opportunity opp = [SELECT ID, Amount from Opportunity where Id = '006gL000007AHyPQAW'];
+// opp.Amount = opp.Amount + 1;
+// update opp;
+List<Contact> contacts = [SELECT Id From Contact where Id = '003gL000005RDvxQAG'];
 
-System.debug(opp);
+System.debug(SubscriptionsRollup.main(contacts));
