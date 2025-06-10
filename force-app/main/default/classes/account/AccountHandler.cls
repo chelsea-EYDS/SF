@@ -25,4 +25,13 @@ public with sharing class AccountHandler {
     }
     return accountNamesMap;
   }
+  @future
+  public static void afterInsert(Set<Id> recordIds) {
+    List<Account> accts = [SELECT Name FROM Account WHERE Id IN :recordIds];
+    for (Account acct : accts) {
+      acct.Name = acct.Name + '-' + 'Updated';
+    }
+    update accts;
+    System.debug(accts);
+  }
 }

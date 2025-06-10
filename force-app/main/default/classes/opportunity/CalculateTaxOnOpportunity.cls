@@ -1,5 +1,5 @@
 public with sharing class CalculateTaxOnOpportunity {
-  public static void main(
+  public static void beforeUpdate(
     List<Opportunity> newList,
     Map<Id, Opportunity> oldList
   ) {
@@ -19,7 +19,7 @@ public with sharing class CalculateTaxOnOpportunity {
       }
     }
   }
-  public static void mainInsert(List<Opportunity> newList) {
+  public static void beforeInsert(List<Opportunity> newList) {
     for (Opportunity opp : newList) {
       if (opp.Amount != null) {
         if (opp.Tax_Percentage__c == null) {

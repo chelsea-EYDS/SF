@@ -1,5 +1,5 @@
-public with sharing class OpportunityHandler {
-  public static void beforeInsert(List<Opportunity> opps) {
+public with sharing class PlatformEventHandler {
+  public static void beforeInsert(List<SObject> obj) {
     try {
     } catch (Exception e) {
       External_Event__e event = new External_Event__e();
@@ -9,8 +9,8 @@ public with sharing class OpportunityHandler {
     }
   }
   public static void beforeUpdate(
-    Map<Id, Opportunity> newList,
-    Map<Id, Opportunity> oldList
+    Map<Id, SObject> newList,
+    Map<Id, SObject> oldList
   ) {
     try {
     } catch (Exception e) {
