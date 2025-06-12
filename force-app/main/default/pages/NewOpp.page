@@ -1,0 +1,16 @@
+<!-- Ensure development mode is turned on under user settings and then can be accessed at orgname/spaex/filename -->
+<!-- https://orgfarm-59f873fb58-dev-ed--c.develop.vf.force.com/apex/newopp -->
+<apex:page standardController="Opportunity">
+  <apex:form>
+    <apex:pageBlock title="New Opportunity" mode="edit">
+      <apex:pageBlockButtons>
+        <apex:commandButton action="{!save}" value="Save" />
+      </apex:pageBlockButtons>
+      <apex:pageBlockSection title="Primary Infoirmation" columns="2">
+        <apex:inputField value="{!opportunity.Name}"></apex:inputField>
+        <apex:inputField value="{!opportunity.StageName}"></apex:inputField>
+        <apex:inputField value="{!opportunity.CloseDate}"></apex:inputField>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

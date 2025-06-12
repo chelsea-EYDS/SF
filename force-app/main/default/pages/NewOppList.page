@@ -1,0 +1,20 @@
+<!-- In order to have a list page you must set recordSetVar -->
+<!-- Standard list controller returns the first 20 records  -->
+
+<apex:page standardController="Opportunity" recordSetVar="opps">
+  <apex:form>
+    <apex:pageBlock>
+      <!-- set a var for loopig ref -->
+      <apex:pageBlockTable value="{!opps}" var="opp">
+        <apex:column value="{!opp.Name}" />
+        <apex:column value="{!opp.StageName}" />
+        <apex:column value="{!opp.CloseDate}" />
+      </apex:pageBlockTable>
+      <apex:pageBlockButtons>
+        <!-- Pagination for fetching more results -->
+        <apex:commandButton action="{!previous}" value="Previous" />
+        <apex:commandButton action="{!next}" value="Next" />
+      </apex:pageBlockButtons>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>
