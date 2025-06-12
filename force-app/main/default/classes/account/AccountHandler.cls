@@ -1,4 +1,4 @@
-public with sharing class AccountHandler {
+public class AccountHandler {
   public static void beforeInsert(List<Account> accts) {
     assignAcctNames(accts);
   }

@@ -1,0 +1,31 @@
+<apex:page controller="AccountSearchController">
+  <apex:form>
+    <apex:pageBlock id="block">
+      <apex:pageBlockSection>
+        <apex:pageBlockSectionItem>
+          <apex:outputLabel for="searchText">
+            Search for account
+          </apex:outputLabel>
+          <apex:panelGroup>
+            <apex:inputText id="searchText" value="{!searchText}" />
+
+            <apex:commandButton
+              value="Search"
+              action="{!doSearch}"
+              reRender="block"
+            />
+          </apex:panelGroup>
+        </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+
+      <apex:pageBlockSection title="Results">
+        <apex:pageBlockSectionItem>
+          <apex:pageBlockTable value="{!results}" var="r">
+            <apex:column value="{!r.Name}" />
+            <apex:column value="{!r.AccountNumber}" />
+          </apex:pageBlockTable>
+        </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>
